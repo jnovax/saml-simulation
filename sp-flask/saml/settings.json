@@ -2,27 +2,27 @@
     "strict": true,
     "debug": true,
     "sp": {
-        "entityId": "https://sp.example.org/metadata/",
+        "entityId": "https://sp.example.org:2443/metadata/",
         "assertionConsumerService": {
-            "url": "https://sp.example.org/?acs",
+            "url": "https://sp.example.org:2443/?acs",
             "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
         },
         "singleLogoutService": {
-            "url": "https://sp.example.org/?sls",
+            "url": "https://sp.example.org:2443/?sls",
             "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
         },
-        "NameIDFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
+        "NameIDFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
         "x509cert": "",
         "privateKey": ""
     },
     "idp": {
-        "entityId": "https://idp.example.com/idp/shibboleth",
+        "entityId": "https://idp.ssocircle.com",
         "singleSignOnService": {
-            "url": "https://idp.example.com/idp/profile/SAML2/Redirect/SSO",
+            "url": "https://idp.ssocircle.com:443/sso/SSORedirect/metaAlias/publicidp",
             "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
         },
         "singleLogoutService": {
-            "url": "https://idp.example.com/idp/profile/SAML2/Redirect/SLO",
+            "url": "https://idp.ssocircle.com:443/sso/IDPSloRedirect/metaAlias/publicidp",
             "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
         },
         "x509cert": ""
